@@ -1,0 +1,34 @@
+body {
+    padding: 20px;
+    margin: 0;
+}
+
+.heading {
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.heading h1 {
+    font-size: 28px;
+    font-family: Arial, serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h3 {
+    font-size: 18px;
+    font-family: Arial, serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h1 + h3 {
+    margin-top: 10px;
+}
+
+.content p {
+    width: 85%;
+    font-family: Arial, serif;
+    font-size: 18px;
+    color: white;
+}
