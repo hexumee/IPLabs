@@ -1,0 +1,64 @@
+body {
+    padding: 20px;
+    margin: 0;
+}
+
+.heading {
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.heading h1 {
+    font-size: 28px;
+    font-family: Arial, serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h3 {
+    font-size: 18px;
+    font-family: Arial, serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h1 + h3 {
+    margin-top: 10px;
+}
+
+.sliceView {
+    height: 540px;
+}
+
+.sliceView div {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.navBar {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0 auto;
+}
+
+.navBar button {
+    background: transparent;
+    border-width: 0;
+}
+
+.navBar label {
+    font-family: Arial, serif;
+    font-size: 24px;
+    color: white;
+    width: 240px;
+    text-align: center;
+}
+
+.navBar button + label {
+    margin-left: 128px;
+}
+
+.navBar label + button {
+    margin-left: 128px;
+}

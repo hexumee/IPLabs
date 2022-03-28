@@ -1,0 +1,81 @@
+body {
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 40px);
+}
+
+.heading {
+    margin-bottom: 30px;
+}
+
+.heading h1 {
+    font-size: 28px;
+    font-family: Arial, serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h3 {
+    font-size: 18px;
+    font-family: Arial, serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h1 + h3 {
+    margin-top: 10px;
+}
+
+#ltp {
+    font-size: 18px;
+    font-family: Arial, serif;
+    color: white;
+}
+
+.menuBar {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    align-self: center;
+}
+
+.menuBar a {
+    font-size: 36px;
+    color: #D7D7D7;
+    font-family: Arial, serif;
+    font-weight: bold;
+    text-decoration: none;
+    animation: fall 1000ms 1 alternate forwards;
+    transform-origin: center;
+}
+
+.menuBar a+a {
+    margin-top: 64px;
+}
+
+#photos {
+    animation-delay: 100ms;
+}
+
+#about {
+    animation-delay: 200ms;
+}
+
+#contacts {
+    animation-delay: 300ms;
+}
+
+#game {
+    animation-delay: 400ms;
+
+    color: gray;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+        transform: translateX(-32px);
+    }
+}

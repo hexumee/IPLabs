@@ -1,0 +1,25 @@
+<html lang="ru">
+    <head>
+        <link href="../styles/photos.css" rel="stylesheet">
+        <title>Фотогалерея</title>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Нет, ну вы посмотрите!</h1>
+            <h3>Красиво, не правда ли? :)</h3>
+        </div>
+        <div class="content">
+            <div class="sliceView" id="sv"></div>
+            <div class="navBar">
+                <button id="g_prev" onclick="leftButtonHandler()">
+                    <img src="../images/nav/next.png" style="transform: rotate(-180deg);" alt="Previous">
+                </button>
+                <label id="g_title">Название</label>
+                <button id="g_next" onclick="rightButtonHandler()">
+                    <img src="../images/nav/next.png" alt="Next">
+                </button>
+            </div>
+        </div>
+    </body>
+    <script src="../scripts/galleryAnimator.js"></script>
+</html>
