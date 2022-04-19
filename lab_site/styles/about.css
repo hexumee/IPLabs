@@ -1,23 +1,24 @@
 body {
     padding: 20px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
-    margin-bottom: 30px;
-    width: 50%;
+    margin-bottom: 32px;
 }
 
 .heading h1 {
     font-size: 28px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
 
 .heading h3 {
     font-size: 18px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
@@ -28,7 +29,7 @@ body {
 
 .content p {
     width: 85%;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     font-size: 18px;
     color: white;
 }

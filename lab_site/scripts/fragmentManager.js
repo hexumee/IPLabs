@@ -1,24 +1,6 @@
 //////////////
 // Анимации //
 //////////////
-function fadeOut(elem) {
-    elem.style.opacity = "1";
-    elem.style.transition = "opacity 200ms";
-    elem.style.opacity = "0";
-    setTimeout(() => {
-        elem.style.display = "none";
-    }, 200);
-}
-
-function fadeIn(elem) {
-    elem.style.opacity = "0";
-    elem.style.display = "block";
-    elem.style.transition = "opacity 200ms";
-    setTimeout(() => {
-        elem.style.opacity = "1";
-    }, 200);
-}
-
 function fadeOutAlt(elem) {
     elem.style.opacity = "1";
     elem.style.transition = "opacity 200ms";
@@ -31,21 +13,6 @@ function fadeInAlt(elem) {
     elem.style.opacity = "1";
 }
 
-function animateToHeader(dest) {
-    parent.document.getElementById("currentPage").style.animation = "navSlideRight 500ms 1 alternate";
-    fadeOut(parent.document.getElementById("currentPage"));
-    setTimeout(() => {
-        parent.document.getElementById("currentPage").innerText = dest;
-        parent.document.getElementById("currentPage").style.animation = "navAlign 500ms 1 alternate";
-    }, 500);
-    setTimeout(() => {
-        fadeIn(parent.document.getElementById("navGraphBack"));
-    }, 300);
-    setTimeout(() => {
-        fadeIn(parent.document.getElementById("currentPage"));
-    }, 300);
-}
-
 ////////////////////////////
 // Управление фрагментами //
 ////////////////////////////
@@ -55,7 +22,7 @@ function setFragment(frag) {
         parent.document.getElementById("rootView").id = "rvTrashed";
         let frame = parent.document.createElement("iframe");
         frame.id = "rootView";
-        frame.src = `fragments/${frag}.html`;
+        frame.src = frag === "game" ? `fragments/${frag}.php` : `fragments/${frag}.html`;
         parent.document.getElementById("viewport").appendChild(frame);
     }, 300);
     setTimeout(() => {
@@ -64,53 +31,40 @@ function setFragment(frag) {
     }, 300);
 }
 
-function navGoBack() {
-    document.getElementById("currentPage").style.animation = "navSlideLeft 500ms 1 alternate";
-    fadeOut(document.getElementById("navGraphBack"));
-    fadeOut(document.getElementById("currentPage"));
-    setTimeout(() => {
-        document.getElementById("currentPage").innerText = "Главная";
-    }, 500);
-    setTimeout(() => {
-        document.getElementById("currentPage").style.animation = "navAlign 500ms 1 alternate";
-        fadeIn(document.getElementById("currentPage"));
-    }, 300);
-    setFragment("home");
-}
-
 ///////////////
 // Фрагменты //
 ///////////////
+function setHomeContent() {
+    setTimeout(() => {
+        setFragment("home");
+    }, 300);
+}
+
 function setDoneContent() {
-    animateToHeader("Выполненные работы");
     setTimeout(() => {
         setFragment("done");
     }, 300);
 }
 
 function setPhotosContent() {
-    animateToHeader("Фотогалерея");
     setTimeout(() => {
         setFragment("photos");
     }, 300);
 }
 
 function setAboutContent() {
-    animateToHeader("О себе");
     setTimeout(() => {
         setFragment("about");
     }, 300);
 }
 
 function setContactsContent() {
-    animateToHeader("Контакты");
     setTimeout(() => {
         setFragment("contacts");
     }, 300);
 }
 
 function setGameContent() {
-    animateToHeader("Игра");
     setTimeout(() => {
         setFragment("game");
     }, 300);
@@ -128,5 +82,4 @@ function callModal() {
     setTimeout(() => {
         modal.style.opacity = "1";
     }, 200);
-
 }

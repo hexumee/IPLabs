@@ -1,0 +1,89 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    margin-bottom: 32px;
+}
+
+.heading h1 {
+    font-size: 32px;
+    font-family: "Nunito", serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h3 {
+    font-size: 20px;
+    font-family: "Nunito", serif;
+    color: white;
+    margin: 0;
+}
+
+.heading h1 + h3 {
+    margin-top: 10px;
+}
+
+.content p {
+    font-size: 20px;
+    font-family: "Nunito", serif;
+    color: white;
+}
+
+#gameFrame {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    font-family: Teletactile, serif;
+    font-size: 48px;
+    color: white;
+    margin: 0 auto;
+}
+
+#gameMenus {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#start, #table {
+    font-family: Teletactile, serif;
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+}
+
+#gameMenus a+a {
+    margin-top: 48px;
+}
+
+#header + #gameMenus {
+    margin-top: 128px;
+}
+
+#noAuth {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+#gameLogister {
+    color: white;
+    outline: none;
+}

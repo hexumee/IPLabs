@@ -1,23 +1,24 @@
 body {
     padding: 20px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
     margin-bottom: 30px;
-    width: 50%;
 }
 
 .heading h1 {
     font-size: 28px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
 
 .heading h3 {
     font-size: 18px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
@@ -26,39 +27,82 @@ body {
     margin-top: 10px;
 }
 
-.sliceView {
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sliceView {
     height: 540px;
 }
 
-.sliceView div {
+#sliceView div {
     width: 960px;
     margin: 0 auto;
 }
 
-.navBar {
+#photoNavBar {
     width: max-content;
     display: flex;
     align-items: center;
     margin: 20px auto 0 auto;
 }
 
-.navBar button {
+#photoNavBar button {
     background: transparent;
     border-width: 0;
+    outline: none;
 }
 
-.navBar label {
-    font-family: Arial, serif;
+#photoNavBar label {
+    font-family: "Nunito", serif;
     font-size: 24px;
     color: white;
     width: 240px;
     text-align: center;
 }
 
-.navBar button + label {
+#photoNavBar button + label {
     margin-left: 128px;
 }
 
-.navBar label + button {
+#photoNavBar label + button {
     margin-left: 128px;
+}
+
+@media (max-width: 1000px) {
+    #sliceView {
+        transform: scale(0.8);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 800px) {
+    #photoNavBar button + label {
+        margin-left: 64px;
+    }
+
+    #photoNavBar label + button {
+        margin-left: 64px;
+    }
+
+    #sliceView {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 600px) {
+    #photoNavBar button + label {
+        margin-left: 32px;
+    }
+
+    #photoNavBar label + button {
+        margin-left: 32px;
+    }
+
+    #sliceView {
+        transform: scale(0.5);
+    }
 }

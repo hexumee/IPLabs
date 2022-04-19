@@ -1,23 +1,24 @@
 body {
     padding: 20px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
-    margin-bottom: 30px;
-    width: 50%;
+    margin-bottom: 32px;
 }
 
 .heading h1 {
     font-size: 28px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
 
 .heading h3 {
     font-size: 18px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
@@ -27,12 +28,19 @@ body {
 }
 
 .content {
-    display: flex;
+    display: grid;
     padding-top: 30px;
+    grid-gap: 24px;
+    grid-template-columns: 180px 180px 180px 180px 180px;
 }
 
-.content div + div {
-    margin-left: 25px;
+.card {
+    width: 180px;
+    height: 185px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    animation: up 1s 1 alternate forwards;
 }
 
 .card img {
@@ -45,7 +53,7 @@ body {
 .card .title {
     font-size: 18px;
     color: white;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     font-weight: bold;
     margin: 0 auto 5px auto;
 }
@@ -53,7 +61,7 @@ body {
 .card .subtitle {
     font-size: 14px;
     color: white;
-    font-family: "Poppins", Arial, serif;
+    font-family: "Poppins", "Nunito", serif;
     font-weight: normal;
     margin: 0 auto 10px auto;
 }
@@ -62,25 +70,15 @@ body {
     width: 140px;
     height: 40px;
     margin: 0 auto;
-    font-family: Poppins, Arial, serif;
+    font-family: Poppins, "Nunito", serif;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    vertical-align: middle;
     line-height: 40px;
     border-width: 0;
     border-radius: 5px;
     color: white;
-}
-
-.card {
-    width: 180px;
-    height: 180px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    animation: up 1s 1 alternate forwards;
 }
 
 #github {
@@ -118,7 +116,7 @@ body {
     background: #7264da;
 }
 
-#no_more {
+#noMore {
     background-color: #4F4F4F;
     animation-delay: 400ms;
 }
@@ -133,3 +131,20 @@ body {
     }
 }
 
+@media (max-width: 1040px) {
+    .content {
+        grid-template-columns: 180px 180px 180px 180px;
+    }
+}
+
+@media (max-width: 850px) {
+    .content {
+        grid-template-columns: 180px 180px 180px;
+    }
+}
+
+@media (max-width: 650px) {
+    .content {
+        grid-template-columns: 180px 180px;
+    }
+}

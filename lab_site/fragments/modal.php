@@ -5,14 +5,15 @@
         <meta charset="utf-8">
         <title>Вход / регистрация</title>
         <link href="../styles/modal.css" rel="stylesheet"/>
+        <link href="../styles/fonts.css" rel="stylesheet"/>
         <script src="../scripts/modalController.js"></script>
     </head>
-    <body id="modalWindow">
+    <body>
         <div class="modal">
-            <div id="register">
+            <div>
                 <label id="reg">Регистрация</label>
                 <form action="#" method="post" enctype="multipart/form-data">
-                    <div class="modal_cred">
+                    <div class="modalCred">
                         <label for="name">Имя</label><input id="name" name="name" type="text" placeholder="Иван Иванов">
                         <label for="nickReg">Никнейм</label><input id="nickReg" name="nickReg" type="text" placeholder="ivanov.ivan">
                         <label for="passwdReg">Пароль</label><input id="passwdReg" name="passwdReg" type="password" placeholder="qwerty1234">
@@ -27,12 +28,12 @@
                 ?>
             </div>
             <div id="divider"></div>
-            <div id="login">
+            <div>
                 <label id="log">Вход</label>
                 <form action="#" method="post" enctype="multipart/form-data">
-                    <div class="modal_cred">
-                        <label for="nickLog">Никнейм</label><input id="nickLog" type="text" placeholder="ivanov.ivan">
-                        <label for="passwdLog">Пароль</label><input id="passwdLog" type="password" placeholder="qwerty1234">
+                    <div class="modalCred">
+                        <label for="nickLog">Никнейм</label><input id="nickLog" name="nickLog" type="text" placeholder="ivanov.ivan">
+                        <label for="passwdLog">Пароль</label><input id="passwdLog" name="passwdLog" type="password" placeholder="qwerty1234">
                     </div>
                     <button id="actionLog" type="submit" name="log">Войти</button>
                 </form>

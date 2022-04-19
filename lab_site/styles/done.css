@@ -1,23 +1,24 @@
 body {
     padding: 20px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .heading {
     margin-bottom: 30px;
-    width: 50%;
 }
 
 .heading h1 {
     font-size: 28px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
 
 .heading h3 {
     font-size: 18px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: 0;
 }
@@ -37,48 +38,46 @@ body {
 .card {
     width: 840px;
     height: 160px;
-    background: #4D4D4D;
+    background: #535353;
     border-radius: 5px;
-    display: flex;
+    display: grid;
     animation: up 1s 1 alternate forwards;
-}
-
-.rc {
-    margin: 10px 0 10px 10px;
-    align-items: start;
-    width: 50%;
-}
-
-.rc h2 {
-    font-size: 24px;
-    font-family: Arial, serif;
-    color: white;
-    margin: 0;
-}
-
-.rc p {
-    font-size: 16px;
-    font-family: Arial, serif;
-    color: white;
+    grid-template-columns: 160px 470px 180px;
 }
 
 .card img {
     width: 160px;
     height: 160px;
     float: left;
-    flex: 0 0 auto;
+}
+
+.rc {
+    margin: 10px 0 10px 15px;
+    width: 420px;
+}
+
+.rc h2 {
+    font-size: 24px;
+    font-family: "Nunito", serif;
+    color: white;
+    margin: 0;
+}
+
+.rc p {
+    font-size: 16px;
+    font-family: "Nunito", serif;
+    color: white;
 }
 
 .card a {
     width: 180px;
     height: 40px;
     margin: auto auto;
-    font-family: Poppins, Arial, serif;
+    font-family: Poppins, "Nunito", serif;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    vertical-align: middle;
     line-height: 40px;
     border-width: 0;
     border-radius: 5px;
@@ -102,15 +101,15 @@ body {
     animation-delay: 400ms;
 }
 
-#no_more {
+#noMore {
     display: flex;
     flex-direction: column;
     animation-delay: 500ms;
 }
 
-#no_more h3 {
+#noMore h3 {
     font-size: 24px;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin: auto auto;
 }
@@ -118,5 +117,67 @@ body {
 @keyframes up {
     to {
         transform: translateY(-32px);
+    }
+}
+
+@media (max-width: 1730px) {
+    .content {
+        grid-template-columns: 840px;
+    }
+}
+
+@media (max-width: 870px) {
+    .content {
+        grid-template-columns: 780px;
+    }
+
+    .card {
+        width: 780px;
+        grid-template-columns: 160px 380px 180px;
+        justify-self: center;
+    }
+
+    .card a {
+        margin: auto 36px;
+    }
+
+    .rc {
+        width: 380px;
+    }
+
+    .rc h2 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #noMore h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 700px;
+        grid-template-columns: 160px 360px 160px;
+        justify-self: center;
+    }
+
+    .card a {
+        width: 160px;
+        font-size: 14px;
+        margin: auto 0;
+    }
+
+    .rc {
+        width: 320px;
+    }
+
+    .rc p {
+        font-size: 14px;
+    }
+
+    .rc h2 {
+        font-size: 20px;
     }
 }

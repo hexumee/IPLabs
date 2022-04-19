@@ -8,3 +8,13 @@
     src: url("../fonts/Poppins-Bold.ttf") format("truetype");
     font-weight: bold;
 }
+
+@font-face {
+    font-family: "Teletactile";
+    src: url("../fonts/Teletactile.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunito-Regular.ttf") format("truetype");
+}

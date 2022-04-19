@@ -1,6 +1,7 @@
 <html lang="ru">
     <head>
         <link href="../styles/photos.css" rel="stylesheet">
+        <link href="../styles/fonts.css" rel="stylesheet">
         <title>Фотогалерея</title>
     </head>
     <body>
@@ -9,13 +10,13 @@
             <h3>Красиво, не правда ли? :)</h3>
         </div>
         <div class="content">
-            <div class="sliceView" id="sv"></div>
-            <div class="navBar">
-                <button id="g_prev" onclick="leftButtonHandler()">
+            <div id="sliceView"></div>
+            <div id="photoNavBar">
+                <button id="gPrev" onclick="leftButtonHandler()">
                     <img src="../images/nav/next.png" style="transform: rotate(-180deg);" alt="Previous">
                 </button>
-                <label id="g_title">Название</label>
-                <button id="g_next" onclick="rightButtonHandler()">
+                <label id="gTitle">Название</label>
+                <button id="gNext" onclick="rightButtonHandler()">
                     <img src="../images/nav/next.png" alt="Next">
                 </button>
             </div>

@@ -14,38 +14,38 @@ body {
     margin: auto auto;
 }
 
-.modal_cred {
+.modalCred {
     margin: 32px 0;
     display: flex;
     flex-direction: column;
 }
 
-.modal_cred input + label {
+.modalCred input + label {
     margin-top: 24px;
 }
 
-.modal_cred label + input {
+.modalCred label + input {
     margin-top: 1px;
 }
 
-.modal_cred input {
+.modalCred input {
     width: 256px;
     font-size: 18px;
+    font-family: "Nunito", serif;
 }
 
-.modal_cred label {
-    font-size: 16px;
-    font-family: Arial, serif;
+.modalCred label {
+    font-size: 18px;
+    font-family: "Nunito", serif;
     color: white;
 }
 
 #reg, #log {
     font-size: 24px;
     font-weight: bold;
-    font-family: Arial, serif;
+    font-family: "Nunito", serif;
     color: white;
     margin-bottom: 16px;
-
 }
 
 #actionReg, #actionLog {
@@ -54,8 +54,10 @@ body {
     border-radius: 5px;
     background-color: #478430;
     font-size: 18px;
+    font-family: "Nunito", serif;
     color: white;
     padding: 5px 10px;
+    margin-top: 14px;
 }
 
 #actionReg:hover, #actionLog:hover {

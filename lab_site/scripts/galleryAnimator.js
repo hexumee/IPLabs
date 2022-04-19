@@ -3,10 +3,10 @@
 ///////////////////////////
 let photoIndex = 0;
 let names = ["Цветение", "Лодки", "Ночная река", "Башня"];
-let paths = ["Blooming.jpg", "Boats.jpg", "Moraine_Lake_at_night.jpg", "Tower.jpg"];
+let paths = ["Blooming.jpg", "Boats.jpg", "Night Lake.jpg", "Tower.jpg"];
 let autoAnimationId;
 let autoAnimationStopped = false;
-let sliceView = document.getElementById("sv");
+let sliceView = document.getElementById("sliceView");
 let slices = [];
 
 
@@ -26,7 +26,7 @@ function fadeIn(elem) {
 }
 
 function prepareAnimation() {
-    document.getElementById("g_title").innerHTML = names[0];
+    document.getElementById("gTitle").innerHTML = names[0];
     mosaicify(true);
     startAnimation();
 }
@@ -40,6 +40,7 @@ function startAnimation() {
 function doRoutine() {
     fadeOut(sliceView);
     mosaicify();
+
     setTimeout(() => {
         fadeIn(sliceView);
     }, 300);
@@ -132,5 +133,5 @@ function rightButtonHandler() {
 window.addEventListener("load", prepareAnimation);
 
 sliceView.addEventListener("transitionend", () => {
-    document.getElementById("g_title").innerHTML = names[photoIndex];
+    document.getElementById("gTitle").innerHTML = names[photoIndex];
 });

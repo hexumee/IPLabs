@@ -1,0 +1,22 @@
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Змейка</title>
+        <link rel="stylesheet" href="../styles/snake.css">
+        <link rel="stylesheet" href="../styles/fonts.css">
+    </head>
+    <body>
+        <div id="gameView">
+            <canvas id="game" width="640" height="640"></canvas>
+            <div id="bottomPanel">
+                <div>
+                    <label>Score: </label>
+                    <label id="score">0</label>
+                </div>
+                <label id="restartGame" onclick="restart();">Play again?</label>
+            </div>
+        </div>
+    </body>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/snake.js"></script>
+</html>

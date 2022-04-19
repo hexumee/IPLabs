@@ -1,35 +1,24 @@
 <html lang="ru">
     <head>
         <link href="../styles/home.css" rel="stylesheet">
+        <link href="../styles/fonts.css" rel="stylesheet">
         <title>Домашняя страница</title>
     </head>
     <body>
-        <div>
+        <div id="centerView">
             <div class="heading">
                 <h1>Что может быть лучше дома?</h1>
                 <h3>Дом, милый дом...</h3>
             </div>
             <div class="content">
-                <div class="left_text">
-                    <p id="ltp">
-                        Вы попали на домашнюю страницу персонального сайта студента <br>
-                        Ульяновского государственного технического университета<br>
-                        группы ИВТАСбд-11 Нуждова Дмитрия.<br>
-                        <br>
-                        Этот сайт был разработан во время выполнения лабораторных работ <br>
-                        по дисциплине «Интернет-программирование».<br>
-                        <br>
-                        Как говорится, добро пожаловать!
-                    </p>
-                </div>
+                <p>
+                    Вы попали на домашнюю страницу персонального сайта студента Ульяновского государственного технического университета группы ИВТАСбд-11 Нуждова Дмитрия.<br>
+                    <br>
+                    Этот сайт был разработан с помощью IDE PhpStorm во время выполнения лабораторных работ по дисциплине «Интернет-программирование» в 2022 году.<br>
+                    <br>
+                    Как говорится, добро пожаловать!
+                </p>
             </div>
-        </div>
-        <div class="menuBar">
-            <a id="done" class="menuItem" onclick="setDoneContent()" href="#">Выполненные работы</a>
-            <a id="photos" class="menuItem" onclick="setPhotosContent()" href="#">Фотогалерея</a>
-            <a id="about" class="menuItem" onclick="setAboutContent()" href="#">О себе</a>
-            <a id="contacts" class="menuItem" onclick="setContactsContent()" href="#">Контакты</a>
-            <a id="game" class="menuItem" onclick="setGameContent()" href="#">Игра</a>
         </div>
     </body>
     <script src="../scripts/fragmentManager.js"></script>
